@@ -7,14 +7,15 @@ import java.util.ArrayList;
  * @version September 17, 2023
  */
 
-public class AddressBook {
+public class
+AddressBook {
 
     // collection of BuddyInfo objects
     private ArrayList <BuddyInfo> buddiesCollection;
 
     // Constructor
     public AddressBook() {
-        buddiesCollection = new ArrayList<BuddyInfo>();
+        buddiesCollection = new ArrayList<>(); //received warning to remove <BuddyInfo>
     }
 
     // Add a BuddyInfo object to the collection
@@ -22,9 +23,16 @@ public class AddressBook {
         buddiesCollection.add(buddyToAdd);
     }
 
-    // Remove a BuddyInfo object from collection
+    // Checks if a buddy is in the array list and removes the BuddyInfo object from collection
     public void removeBuddy(BuddyInfo buddyToRemove) {
-        buddiesCollection.remove(buddyToRemove);
+
+        //for each loop
+        for (BuddyInfo removeThisBud: buddiesCollection) {
+            if (removeThisBud == buddyToRemove) {
+                buddiesCollection.remove(buddyToRemove);
+            }
+        }
+
     }
 
     public static void main(String[] args) {
@@ -32,7 +40,6 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(buddy);
-        //System.out.println("Address Book");
     }
 
 }
