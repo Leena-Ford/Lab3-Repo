@@ -35,6 +35,8 @@ AddressBook {
 
     }
 
+    public void newMethod(){}
+
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Larry", "University Street", 18374);
         AddressBook addressBook = new AddressBook();
