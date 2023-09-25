@@ -18,7 +18,7 @@ AddressBook {
         buddiesCollection = new ArrayList<>(); //received warning to remove <BuddyInfo>
     }
 
-    // Add a BuddyInfo object to the collection
+    // Add a BuddyInfo object to the collection of buddies
     public void addBuddy(BuddyInfo buddyToAdd) {
         buddiesCollection.add(buddyToAdd);
     }
